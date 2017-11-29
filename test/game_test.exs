@@ -35,4 +35,30 @@ defmodule GameTest do
     { game, _tally } = Game.make_move(game, "x")
     assert game.game_state == :already_used
   end
+  
+  test "Recognize a good guess" do
+    game = Game.new_game("wobbly")
+    { game, _tally } = Game.make_move(game, "w")
+    assert game.game_state == :good_guess
+    assert game.turns_left == 7
+  end
+  
+  test "Won a game" do
+    game = Game.new_game("wobbly")
+    { game, _tally } = Game.make_move(game, "w")
+    assert game.game_state == :good_guess
+    assert game.turns_left == 7
+    { game, _tally } = Game.make_move(game, "o")
+    assert game.game_state == :good_guess
+    assert game.turns_left == 7
+    { game, _tally } = Game.make_move(game, "b")
+    assert game.game_state == :good_guess
+    assert game.turns_left == 7
+    { game, _tally } = Game.make_move(game, "l")
+    assert game.game_state == :good_guess
+    assert game.turns_left == 7
+    { game, _tally } = Game.make_move(game, "y")
+    assert game.game_state == :won
+    assert game.turns_left == 7
+  end
 end
