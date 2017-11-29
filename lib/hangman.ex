@@ -4,6 +4,5 @@ defmodule Hangman do
   def hello do
     Dictionary.random_word()
   end
-
   defdelegate new_game(), to: Game
 end
