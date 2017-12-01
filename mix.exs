@@ -19,7 +19,7 @@ defmodule Hangman.MixProject do
 
   defp deps do
     [
-      {:dictionary, github: "https://github.com/rizafahmi/elixir_dictionary_hangman"},
+      {:dictionary, github: "rizafahmi/elixir_dictionary_hangman"},
     ]
   end
 end
