@@ -37,7 +37,7 @@ defmodule Hangman.Game do
 
   ################################
 
-  defp accept_move(game, guess, _already_guessed = true) do
+  defp accept_move(game, _guess, _already_guessed = true) do
     Map.put(game, :game_state, :already_used)
   end
 
@@ -69,7 +69,7 @@ defmodule Hangman.Game do
   end
 
   defp reveal_letter(letter, _in_words = true), do: letter
-  defp reveal_letter(letter, _not_in_words), do: "_"
+  defp reveal_letter(_letter, _not_in_words), do: "_"
 
   defp maybe_won(true), do: :won
   defp maybe_won(_), do: :good_guess
