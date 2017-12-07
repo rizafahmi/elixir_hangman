@@ -1,6 +1,7 @@
 defmodule Hangman do
   def new_game() do
-    Hangman.Server.start_link()
+    {:ok, pid} = Hangman.Server.start_link()
+    pid
   end
 
   def tally(game_pid) do
