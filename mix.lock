@@ -1,3 +1,4 @@
 %{
+  "dictionary": {:git, "https://github.com/rizafahmi/elixir_dictionary_hangman.git", "7ebaa54628cd6f9fb59478df08ae70a2137ff130", []},
   "inflex": {:hex, :inflex, "1.9.0", "2bef01a84437bca0a12fc107821ae7771b0ba847dccab5d1cd61f35972e66813", [], [], "hexpm"},
 }
