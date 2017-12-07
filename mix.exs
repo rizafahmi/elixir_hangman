@@ -13,13 +13,14 @@ defmodule Hangman.MixProject do
 
   def application do
     [
+      mod: {Hangman.Application, []},
       extra_applications: [:logger]
     ]
   end
 
   defp deps do
     [
-      {:dictionary, github: "rizafahmi/elixir_dictionary_hangman"},
+      {:dictionary, github: "rizafahmi/elixir_dictionary_hangman"}
     ]
   end
 end
