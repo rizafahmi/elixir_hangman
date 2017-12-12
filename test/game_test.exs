@@ -38,6 +38,7 @@ defmodule GameTest do
 
   test "Recognize a good guess" do
     game = Game.new_game("wobbly")
+    assert game.game_state == :initializing
     {game, _tally} = Game.make_move(game, "w")
     assert game.game_state == :good_guess
     assert game.turns_left == 7
@@ -45,6 +46,7 @@ defmodule GameTest do
 
   test "Won a game" do
     game = Game.new_game("wobbly")
+    assert game.game_state == :initializing
     {game, _tally} = Game.make_move(game, "w")
     assert game.game_state == :good_guess
     assert game.turns_left == 7
