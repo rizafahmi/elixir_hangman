@@ -20,7 +20,7 @@ defmodule Hangman.MixProject do
 
   defp deps do
     [
-      {:dictionary, github: "rizafahmi/elixir_dictionary_hangman"}
+      {:dictionary, path: "../dictionary"}
     ]
   end
 end
